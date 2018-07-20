@@ -38,16 +38,20 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View view) {
         //Reading data and check condition
-        String UserName=sharedPreferences.getString("Username","");
+        String UserName=sharedPreferences.getString("UserName",null);
+        String Password=sharedPreferences.getString("Password",null);
+
         Boolean logged_in= Boolean.valueOf(String.valueOf(sharedPreferences.getBoolean("logged_in",false)));
         Boolean logged_in1= Boolean.valueOf(String.valueOf(sharedPreferences.getBoolean("logged_in1",false)));
-        String Password=sharedPreferences.getString("Password","");
+
 
         txuserName=(EditText) findViewById(R.id.txtuserName);
-        String uname=txuserName.getText().toString();
         txpassword=(EditText) findViewById(R.id.txtpassword);
+
+        String uname=txuserName.getText().toString();
         String pass=txpassword.getText().toString();
-        if((UserName.equals(uname))&&Password.equals(pass))
+
+        if(UserName.equals(uname) && Password.equals(pass))
         {
             Toast.makeText(this,"Login Succefully",Toast.LENGTH_LONG).show();
 
