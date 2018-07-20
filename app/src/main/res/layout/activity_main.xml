@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="login"
-            android:text="  Login    "
+            android:text="Login"
             android:textSize="20sp" android:paddingHorizontal="20dp"/>
 
         <Button
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="clear"
-            android:text="   Clear   "
+            android:text="Clear"
             android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>
